@@ -19,7 +19,6 @@ const background = new Image();
 background.src = 'img/fisketemplate.png'; 
 
 
-
 // regner størrelser ud
 let canvasRect = canvas.getBoundingClientRect();
 const canvasOffsetX = canvas.offsetLeft;
@@ -36,9 +35,9 @@ templateCanvas.height = canvas.height;
 // Redraw the fish to fill the template layer
 background.onload = function () {
   templateCtx.drawImage(background, 0, 0, templateCanvas.width, templateCanvas.height);
+
+  
 };
-
-
 
 
 // sætter defaults for at tegne
@@ -165,22 +164,3 @@ saveButton.addEventListener('click', () => {
   //sender videre til næste side med det samme man trykker gem
   window.location.href = 'akvarium.html';
   });
-
-
-
-
-  //kode til akvariumside
-
-
-  const sefiskknap = document.getElementById('sefisk');
-
-  sefiskknap.addEventListener('click', () => {
-  const imgElement = document.getElementById('fishDrawing');
-  const savedDrawing = localStorage.getItem('savedDrawingOnly');
-
-  if (savedDrawing) {
-    imgElement.src = savedDrawing;
-  } else {
-    imgElement.alt = 'No saved drawing found 😢';
-  }
-});
