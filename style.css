@@ -1,0 +1,35 @@
+
+
+#colors {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#sizes {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+
+
+#FiskeTemplates {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+
+
+#FiskeTemplates .FiskeTemplate {
+  width: 80px;
+  height: 60px;
+  object-fit: fill;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.1s, border-color 0.2s;
+}
