@@ -155,12 +155,11 @@ canvas.addEventListener('mousemove', draw);
 const saveButton = document.getElementById('SaveFish');
 
 saveButton.addEventListener('click', () => {
-  // converter det til url så man kan
+  // converter det til url så man kan sende img
   const drawingData = canvas.toDataURL('image/png');
 
   // gem til localstorage
   localStorage.setItem('savedDrawingOnly', drawingData);
-  console.log("Fisk er gemt")
 
 
   //sender videre til næste side med det samme man trykker gem
@@ -169,10 +168,13 @@ saveButton.addEventListener('click', () => {
 
 
 
+
   //kode til akvariumside
 
 
-  window.addEventListener('DOMContentLoaded', () => {
+  const sefiskknap = document.getElementById('sefisk');
+
+  sefiskknap.addEventListener('click', () => {
   const imgElement = document.getElementById('fishDrawing');
   const savedDrawing = localStorage.getItem('savedDrawingOnly');
 
